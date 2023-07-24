@@ -1,3 +1,1 @@
-lazyvim configuration for neovim
-ideavim 
-vscodevim
+My configuration of lazyvim, ideavim and vscodevim
