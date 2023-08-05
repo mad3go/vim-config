@@ -2,10 +2,14 @@
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
 -- This file is automatically loaded by plugins.core
+-- set t_Co=256
+-- let g:solarized_termcolors=256
+
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 local opt = vim.opt
+local cmd = vim.cmd
 
 opt.autowrite = true -- Enable auto write
 opt.clipboard = "unnamedplus" -- Sync with system clipboard
@@ -48,6 +52,16 @@ opt.updatetime = 200 -- Save swap file and trigger CursorHold
 opt.wildmode = "longest:full,full" -- Command-line completion mode
 opt.winminwidth = 5 -- Minimum window width
 opt.wrap = false -- Disable line wrap
+
+cmd("set tabstop=4")
+cmd("set shiftwidth=4")
+cmd("set expandtab")
+cmd([[
+    augroup IndentSettings
+        autocmd!
+        autocmd FileType c setlocal shiftwidth=8
+    augroup END
+]])
 
 if vim.fn.has("nvim-0.9.0") == 1 then
   opt.splitkeep = "screen"
