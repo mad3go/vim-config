@@ -53,13 +53,16 @@ opt.wildmode = "longest:full,full" -- Command-line completion mode
 opt.winminwidth = 5 -- Minimum window width
 opt.wrap = false -- Disable line wrap
 
+-- Default format
 cmd("set tabstop=4")
 cmd("set shiftwidth=4")
 cmd("set expandtab")
+-- C8 Lua2 Other4
 cmd([[
     augroup IndentSettings
         autocmd!
         autocmd FileType c setlocal shiftwidth=8
+        autocmd FileType lua setlocal shiftwidth=2 tabstop=2
     augroup END
 ]])
 
