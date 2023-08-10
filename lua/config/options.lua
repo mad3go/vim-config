@@ -9,12 +9,16 @@ opt.shellquote = "\\"
 opt.shellxquote = ""
 opt.clipboard = "unnamedplus"
 
-cmd('set tabstop=4')
-cmd('set shiftwidth=4')
-cmd('set expandtab')
+-- Default format
+opt.tabstop = 4
+opt.shiftwidth = 4
+opt.expandtab = true
+
+-- C8 Lua2 Other4
 cmd([[
-    augroup IndentSettings
-        autocmd!
-        autocmd FileType c setlocal shiftwidth=8
-    augroup END
+  augroup IndentSettings
+    autocmd!
+    autocmd FileType c setlocal shiftwidth=8 tabstop=8
+    autocmd FileType lua setlocal shiftwidth=2 tabstop=2
+  augroup END
 ]])
