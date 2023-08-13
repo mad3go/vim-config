@@ -1,13 +1,13 @@
 -- Keymaps are automatically loaded on the VeryLazy event
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
--- Keymaps are automatically loaded on the VeryLazy event
--- Default keymaps that are always set: https://github.com/LazyLazyVim/blob/main/lua/lazyvim/config/keymaps.lua
--- Add any additional keymaps here
 local keymap = vim.keymap
 
 keymap.set("i", "jj", "<Esc>")
 keymap.set("n", "<leader>sv", "<C-W>v")
+keymap.set("n", "<leader>tt", "<cmd>ToggleTerm<cr>")
+keymap.set("n", "H", "^")
+keymap.set("n", "L", "$")
 
 -- tab nav
 keymap.set("n", "<leader>tn", "<cmd>tabnext<cr>")
@@ -33,11 +33,3 @@ keymap.set("n", "gp", "<cmd>Lspsaga peek_definition<CR>")
 keymap.set("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>")
 keymap.set("n", "[d", "<cmd>Lspsaga diagnostic_jump_prev<CR>") -- jump to previous diagnostic in buffer
 keymap.set("n", "]d", "<cmd>Lspsaga diagnostic_jump_next<CR>")
-
--- keymap
-keymap.set("n", "<leader>hw", ":HopWord<cr>")
-keymap.set("n", "<leader>hww", ":HopWordMW<cr>")
-keymap.set("n", "<leader>hc", ":HopChar1<cr>")
-keymap.set("n", "<leader>hcw", ":HopChar1MW<cr>")
-
-keymap.set("n", "<leader>cge", "<cmd>ChatGPTEditWithInstructions<cr>")
