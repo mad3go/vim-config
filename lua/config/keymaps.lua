@@ -6,6 +6,8 @@ local keymap = vim.keymap
 keymap.set("i", "jj", "<Esc>")
 keymap.set("n", "<leader>sv", "<C-W>v")
 keymap.set("n", "<leader>tt", "<cmd>ToggleTerm<cr>")
+keymap.set("n", "H", "^")
+keymap.set("n", "L", "$")
 
 -- tab nav
 keymap.set("n", "<leader>tn", "<cmd>tabnext<cr>")
