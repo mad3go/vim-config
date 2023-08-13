@@ -6,11 +6,7 @@
       "command": "editor.closeTestPeek",
       "when": "testing.isInPeek && !config.editor.stablePeek || testing.isPeekVisible && !config.editor.stablePeek"
   },
-  {
-      "key": "ctrl+`",
-      "command": "editor.action.rename",
-  },
-  { "key": "ctrl+", "command": "workbench.action.terminal.focus" },
+  { "key": "ctrl+j", "command": "workbench.action.terminal.focus" },
   {
       "key": "ctrl+j",
       "command": "workbench.action.focusActiveEditorGroup",
