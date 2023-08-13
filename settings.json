@@ -1,5 +1,5 @@
 {
-  "workbench.colorTheme": "Tokyo Night",
+  
   "explorer.confirmDelete": false,
   "code-runner.runInTerminal": true,
   "terminal.integrated.profiles.windows": {
@@ -42,20 +42,27 @@
     "<C-b>": false,
     "<C-j>": false,
   },
+/******************which-key*****************************/
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [";"],
+      "commands": ["whichkey.show"]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": [";"],
+      "commands": ["whichkey.show"]
+    }
+  ],
+/******************which-key*****************************/
+/******************remapping*****************************/
   "vim.insertModeKeyBindings": [
     {
       "before": ["j", "j"],       
       "after": ["<Esc>"]
     }
   ],
-  // which-key
-  
-  // "vim.visualModeKeyBindings": [
-  //   {
-  //     "before": ["j", "j"],
-  //     "after": ["<Esc>"]
-  //   }
-  // ], 
   "vim.normalModeKeyBindings": [
     //跳转到第一行首字母
     {
@@ -148,8 +155,8 @@
       ]
     },
   ],
- /*****************************************VSCode vim*************************************************/ 
-  
+/******************remapping*****************************/
+  "workbench.colorTheme": "Tokyo Night", 
   "workbench.colorCustomizations": {
     "statusBar.background": "#8FBCBB",
     "statusBar.noFolderBackground": "#8FBCBB",
