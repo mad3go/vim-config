@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 {
+  "workbench.colorTheme": "Tokyo Night",
   "explorer.confirmDelete": false,
   "code-runner.runInTerminal": true,
   "terminal.integrated.profiles.windows": {
@@ -19,7 +19,7 @@
   "vim.surround": true,
   "vim.statusBarColorControl": true,
   "vim.highlightedyank.enable":true,
-  "vim.highlightedyank.color":"rgba(250, 240, 170, 0.5)",
+  "vim.highlightedyank.color": "rgba(230, 97, 89, 0.7)",
   "vim.highlightedyank.duration": 500,
   "vim.statusBarColors.replace": "#000000",
   "vim.statusBarColors.insert": "#5f0000",
@@ -43,6 +43,8 @@
       "after": ["<Esc>"]
     }
   ],
+  // which-key
+  
   // "vim.visualModeKeyBindings": [
   //   {
   //     "before": ["j", "j"],
@@ -50,145 +52,44 @@
   //   }
   // ], 
   "vim.normalModeKeyBindings": [
+    //跳转到第一行首字母
     {
-      "before": ["<leader>", "e"],
-      "command": "workbench.view.explorer",
-      "when": "!explorerViewletVisible"
-    },
-    {
-      "before": ["<leader>", "e"],
-      "command": "workbench.files.action.closeFileExplorer",
-      "when": "explorerViewletVisible"
-    },
-    {
-      "before": ["<leader>", "t", "n"],
-      "commands": [":tabnext"]
-    },
-    {
-      "before": ["<leader>", "t", "p"],
-      "commands": [":tabprev"]
-    },
-    {
-      "before": ["<leader>", "t", "f"],
-      "commands": [":tabfirst"]
-    },
-    {
-      "before": ["<leader>", "t", "l"],
-      "commands": [":tablast"]
-    },
-    {
-      "before": ["<leader>", "w"],
-      "commands": [":bd"]
-    },
-    // Code actions
-    {
-      "before": [
-        "<leader>",
-        "s",
-        "a"
+      "after": [
+        "^"
       ],
-      "commands": [
-        "editor.action.sourceAction"
+      "before": [
+        "H"
       ]
     },
-    // Quick fix
+    //跳转到第一行尾字母
     {
-      "before": [
-        "<leader>",
-        "q",
-        "f"
+      "after": [
+        "$"
       ],
-      "commands": [
-        "editor.action.quickFix"
+      "before": [
+        "L"
       ]
     },
-  ],
-  "workbench.colorTheme": "One Dark Pro",
-  "workbench.colorCustomizations": {
-    "statusBar.background": "#005f5f",
-    "statusBar.noFolderBackground": "#005f5f",
-    "statusBar.debuggingBackground": "#005f5f"
-  },
-  "terminal.integrated.fontFamily": "CodeNewRoman NFM",
-  "security.workspace.trust.untrustedFiles": "open",
-  "C_Cpp.default.compilerPath": "E:\\MinGW\\mingw64\\bin\\g++.exe",
-  "C_Cpp.default.cStandard": "c89",
-  "C_Cpp.default.cppStandard": "c++14",
-  "C_Cpp.default.includePath": [
-    "E:\\MinGW\\mingw64\\lib"
-  ],
-  "C_Cpp.default.intelliSenseMode": "gcc-x64",
-  "terminal.external.windowsExec": "C:\\Windows\\System32\\cmd.exe",
-  "terminal.integrated.defaultProfile.windows": "PowerShell",
-  "KeilAssistant.MDK.Uv4Path": "D:\\keil\\UV4\\UV4.exe",
-  "errorLens.excludeBySource": [
-    "C/C++(1696)",
-    "markdownlint(MD040)",
-    "markdownlint(MD010)",
-    "markdownlint(MD001)"
-  ],
-=======
-{
-  "explorer.confirmDelete": false,
-  "code-runner.runInTerminal": true,
-  "terminal.integrated.profiles.windows": {
-    "Command Prompt": {
-    "path": "C:\\Windows\\System32\\cmd.exe",
-    "args": ["-NoExit", "/K", "chcp 65001"]
-    },
-    "PowerShell": {
-    "source": "PowerShell",
-    "args": ["-NoExit", "/C", "chcp 65001"]
-    }
-  },
-  "vim.leader": "<space>",
-  "vim.ignorecase": false,
-  "vim.easymotion": true,
-  "vim.sneak": true,
-  "vim.surround": true,
-  "vim.statusBarColorControl": true,
-  "vim.highlightedyank.enable":true,
-  "vim.highlightedyank.color":"rgba(250, 240, 170, 0.5)",
-  "vim.highlightedyank.duration": 500,
-  "vim.statusBarColors.replace": "#000000",
-  "vim.statusBarColors.insert": "#5f0000",
-  "vim.statusBarColors.normal": "#005f5f",
-  "vim.statusBarColors.visual": "#5f00af",
-  "vim.statusBarColors.visualblock": "#005f87",
-  "vim.statusBarColors.visualline": "#86592d",
-  "vim.incsearch": true,
-  "vim.useSystemClipboard": true,
-  "vim.useCtrlKeys": true,
-  "vim.handleKeys": {
-    "<C-w>": false,
-    "<C-c>": false,
-    "<C-v>": false,
-    "<C-b>": false,
-    "<C-j>": false,
-  },
-  "vim.insertModeKeyBindings": [
     {
-      "before": ["j", "j"],       
-      "after": ["<Esc>"]
-    }
-  ],
-  // "vim.visualModeKeyBindings": [
-  //   {
-  //     "before": ["j", "j"],
-  //     "after": ["<Esc>"]
-  //   }
-  // ], 
-  "vim.normalModeKeyBindings": [
-    // {
-    //   "before": ["<leader>", "e"],
-    //   "command": "workbench.view.explorer",
-    //   "when": "!explorerViewletVisible"
-    // },
-    // {
-    //   "before": ["<leader>", "e"],
-    //   "command": "workbench.files.action.closeFileExplorer",
-    //   "when": "explorerViewletVisible"
-    // },
+      "before":["]", "d"],
+      "commands":["editor.action.mark.next"]
+    },
+    {
+      "before":["[", "d"],
+      "commands":["editor.action.mark.prev"]
+    },
+    {
+      "before":["K"],
+      "commands":["editor.action.showHover"]
+    },
+    {
+      "before":["leader", "i"],
+      "commands":["extension.toggleBool"]
+    },
+    {
+      "before":["leader", "c", "r"],
+      "commands":["editor.action.rename"]
+    },
     {
       "before": ["<leader>", "t", "n"],
       "commands": [":tabnext"]
@@ -240,13 +141,16 @@
       "command": [
         "workbench.action.toggleSidebarVisibility"
       ]
-    }
+    },
   ],
-  "workbench.colorTheme": "One Dark Pro Darker",
+ /*****************************************VSCode vim*************************************************/ 
+  
   "workbench.colorCustomizations": {
     "statusBar.background": "#005f5f",
     "statusBar.noFolderBackground": "#005f5f",
-    "statusBar.debuggingBackground": "#005f5f"
+    "statusBar.debuggingBackground": "#005f5f",
+    "editorCursor.foreground": "#ffc600",
+    "tab.activeBorder": "#ffc600"
   },
   "terminal.integrated.fontFamily": "CodeNewRoman NFM",
   "security.workspace.trust.untrustedFiles": "open",
@@ -270,13 +174,12 @@
     "markdownlint(MD010)",
     "markdownlint(MD001)"
   ],
-  "files.encoding": "gb2312",
   "clangd.path": "clangd.exe",
   //"C_Cpp.intelliSenseEngine": "Disable",
   "editor.tabSize": 8,
-  "editor.fontFamily": "Hack Nerd Font",
+  "editor.fontFamily": "FiraCode Nerd Font",
   "remote.SSH.remotePlatform": {
     "192.168.11.121": "linux"
-  }
->>>>>>> d9a2d68 (update to the latest on windows)
+  },
+  "oneDarkPro.vivid": false
 }
